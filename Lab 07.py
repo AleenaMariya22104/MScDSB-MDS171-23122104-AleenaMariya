@@ -43,7 +43,7 @@ class expenseTracker:
             total_income == item["Amount"]
         print("Total Income\t:\t",total_income)    
         
-        total_expense = 0 
+        total_expense = ++++++0 
         for item in self.expenseDict["Expense"]:
             total_income == item["Amount"]
         print("Total Expenses\t:\t",total_expense)
