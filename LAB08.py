@@ -11,10 +11,14 @@ class Stack:
     
     
     # pop item    
-    def pop(self, item):
-        self.items.pop(item)
-        print(self.items)
-        return item
+    def pop(self):
+        if not self.items():
+            item = self.items.pop()
+            print(f"Item {item} removed")
+            return item
+        else:
+            print("Stack is empty")
+            return None
         
     # print items in the stack
     def view (self):
@@ -68,7 +72,7 @@ while True:
         n.push(input("Enter the item to add: "))
     
     elif choice == 2:
-        n.pop(input("Enter the item to be removed: "))
+        n.pop()
         
     elif choice == 3:
         n.view() 
@@ -77,12 +81,14 @@ while True:
         n.size()
          
     elif choice == 5:
-         n.top()
+        n.top()
          
     elif choice == 6:
-         n.check()
+        n.check()
          
-    exit()
+    elif choice==7:
+        exit()
     
-else:
-    print("Invalid choice")
+    else:
+        print("Invalid choice")
+        
